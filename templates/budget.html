@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!-- Main heading -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center">Expense Tracker</h1>
+            <h2>Hello {{ user }}</h2>
+            <h3>Here are your finances:</h3>
+            <h4>Income: {{ total_income }}</h4>
+            <h4>Expenses: {{ total_expenses }}</h4>
+        </div>
+    </div>
+</div>
+<div>
+    <a class="btn btn-success" href="{% url 'add_income' %}">Add Income</a>
+    <a class="btn btn-danger" href="{% url 'add_expense' %}">Add Expense</a>
+</div>
+    {% endblock %}
